@@ -1,0 +1,23 @@
+main div.columnas {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nosotros {
+    width: 65%;
+}
+
+.medios img {
+    display:block;
+    width: 100px;
+    margin: 10px auto 10px auto;
+}
+.editoriales{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.editoriales img{
+    width: 100px;
+    margin: auto 10px 10px auto;
+}

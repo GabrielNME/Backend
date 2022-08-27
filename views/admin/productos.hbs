@@ -1,1 +1,46 @@
-<p>Hola?</p>
+<div class="centrado">
+
+    <div class="row">
+        <p class="text-end">Hola {{usuario}},¡Bienvenido! <a class="btn btn-danger" href="/admin/login/logout">Cerrar
+                sesión</a></p>
+    </div>
+
+    <div class="row">
+        <div class="col-7">
+            <h2>Listado de productos:</h2>
+        </div>
+        <div class="col-5 text-end">
+            <a class="btn btn-success" href="/admin/productos/agregar">Nuevo producto<ion-icon name="add-outline"
+                    style="color:white ;"></ion-icon></a>
+        </div>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Titulo</th>
+                <th>Costo</th>
+                <th>Stock</th>
+                <th>Id</th>
+                <th>Portada</th>
+                <th></th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {{#each productos}}
+            <tr>
+                <td>{{nombre}}</td>
+                <td>${{precio}}</td>
+                <td>{{stock}}</td>
+                <td>{{id}}</td>
+                <td>{{{imagen}}}</td>
+                <td style="width: 40px;">
+                    <a href="/admin/productos/modificar/{{id}}"><ion-icon name="create"></ion-icon></a>
+                    <a href="/admin/productos/eliminar/{{id}}"><ion-icon name="trash"></ion-icon></a>
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>
